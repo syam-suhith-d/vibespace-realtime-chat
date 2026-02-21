@@ -2,7 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://localhost:4000', { autoConnect: false });
+// For running locally
+// const socket = io('http://localhost:4000', { autoConnect: false });
+
+// Updated socket after deploying the backend on render
+const socket = io('https://vibespace-realtime-chat-backend.onrender.com', { autoConnect: false });
+
 
 function Chat() {
   const [username, setUsername] = useState('');
