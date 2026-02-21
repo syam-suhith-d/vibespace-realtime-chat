@@ -1,0 +1,129 @@
+// initial css file for app
+
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  max-width: 70%;
+}
+
+.username {
+  font-size: 0.8em;
+  color: #555;
+  margin-bottom: 4px;
+  padding: 0 5px;
+}
+
+.other-message {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+.other-message .message {
+  background-color: #e9e9eb;
+  color: #000;
+}
+.other-message .username {
+  align-self: flex-start;
+}
+
+.my-message {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+.my-message .message {
+  background-color: #007bff;
+  color: white;
+}
+.my-message .username {
+  display: none;
+}
+/* Styling for Join/Leave notifications */
+.system-message {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin: 12px 0;
+  font-style: italic;
+  width: 100%;
+}
+
+/* Styling for the Typing Indicator */
+.typing-indicator {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Optional: Adds a gentle fading animation to the text */
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}

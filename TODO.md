@@ -1,0 +1,3 @@
+- [ ] Update socket connection URL in Chat.jsx to 'http://localhost:4000'
+- [ ] Run the chat server (server.cjs) on port 4000
+- [ ] Test the chat functionality by sending messages
